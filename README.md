@@ -1,3 +1,5 @@
+This is the fork of Device Preview built by [Aloisdeniel](https://github.com/aloisdeniel)
+
 <p align="center">
   <img src="https://github.com/aloisdeniel/flutter_device_preview/raw/master/logo.png" alt="Device Preview for Flutter" />
 </p>
@@ -17,13 +19,13 @@
 
 ## Main features
 
-* Preview any device from any device
-* Change the device orientation
-* Dynamic system configuration (*language, dark mode, text scaling factor, ...)*
-* Freeform device with adjustable resolution and safe areas
-* Keep the application state
-* Plugin system (*Screenshot, File explorer, ...*)
-* Customizable plugins
+- Preview any device from any device
+- Change the device orientation
+- Dynamic system configuration (_language, dark mode, text scaling factor, ...)_
+- Freeform device with adjustable resolution and safe areas
+- Keep the application state
+- Plugin system (_Screenshot, File explorer, ..._)
+- Customizable plugins
 
 ## Quickstart
 
@@ -40,9 +42,9 @@ dependencies:
 
 Wrap your app's root widget in a `DevicePreview` and make sure to :
 
-* Set your app's `useInheritedMediaQuery` to `true`.
-* Set your app's `builder` to `DevicePreview.appBuilder`.
-* Set your app's `locale` to `DevicePreview.locale(context)`.
+- Set your app's `useInheritedMediaQuery` to `true`.
+- Set your app's `builder` to `DevicePreview.appBuilder`.
+- Set your app's `locale` to `DevicePreview.locale(context)`.
 
 > Make sure to override the previous properties as described. If not defined, `MediaQuery` won't be simulated for the selected device.
 
