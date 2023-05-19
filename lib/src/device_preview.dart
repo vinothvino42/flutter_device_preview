@@ -429,7 +429,7 @@ class _DevicePreviewState extends State<DevicePreview> {
     );
 
     return Container(
-      alignment: widget.alignment ?? Alignment.centerRight,
+      alignment: widget.alignment ?? Alignment.center,
       color: widget.backgroundColor ?? theme.canvasColor,
       padding: EdgeInsets.only(
         top: 20 + mediaQuery.viewPadding.top,
