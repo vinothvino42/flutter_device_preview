@@ -14,7 +14,6 @@ import 'package:device_preview/src/views/tool_panel/sections/system.dart';
 import 'package:device_preview/src/views/tool_panel/tool_panel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'dart:ui' as ui;
@@ -61,6 +60,7 @@ class DevicePreview extends StatefulWidget {
     this.storage,
     this.enabled = true,
     this.backgroundColor,
+    this.alignment,
   }) : super(key: key);
 
   /// If not [enabled], the [child] is used directly.
@@ -76,6 +76,11 @@ class DevicePreview extends StatefulWidget {
   ///
   /// It is common to give the root application widget.
   final WidgetBuilder builder;
+
+  /// The alignment of the device frame
+  ///
+  /// Defaults to `Alignment.center`
+  final Alignment? alignment;
 
   /// The background color of the canvas
   ///
@@ -424,6 +429,7 @@ class _DevicePreviewState extends State<DevicePreview> {
     );
 
     return Container(
+      alignment: widget.alignment ?? Alignment.centerRight,
       color: widget.backgroundColor ?? theme.canvasColor,
       padding: EdgeInsets.only(
         top: 20 + mediaQuery.viewPadding.top,
